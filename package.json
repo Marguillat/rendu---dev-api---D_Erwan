@@ -5,6 +5,7 @@
     "jsonwebtoken": "^9.0.2"
   },
   "scripts": {
-    "start": "node --watch src/server.js"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
   }
 }

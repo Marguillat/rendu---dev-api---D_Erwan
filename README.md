@@ -2,7 +2,9 @@
 
 ## <a name="2"></a> Tables des matières
 
-[Rendu - Dev api - D_Erwan](#1) [Tables des matières](#2)
+[Rendu - Dev api - D_Erwan](#1) 
+
+[Tables des matières](#2)
 
 ## Lancer l'application
 
