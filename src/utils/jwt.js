@@ -28,13 +28,13 @@ const checkTokenMiddleware = (req,res,next)=>{ //middleware pour express
           if (decoded) {
             next() // prochain middleware de la route
           } else {
-            return res.status(401).send({})
+            return res.status(401).send("inspecteur, il faut que vous portier votre badge d'autorization jwt !!")
           }
         } catch (error) {
           return res.status(401).send(error)
         }
       } else {
-        return res.status(401).send({})
+        return res.status(401).send("inspecteur, il faut que vous portier votre badge d'autorization jwt !!")
       }
 }
 
