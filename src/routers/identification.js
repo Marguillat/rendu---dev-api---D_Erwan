@@ -25,7 +25,7 @@ router.post('/', (req,res,next)=>{
     res.status(200)
       .json({
         "_links":{
-          "_self": hal.halLinkObject('/identification'),
+          "self": hal.halLinkObject('/identification'),
           "crime-scene": hal.halLinkObject('/bedroom'),
         },
         "jwt": createJWT(data.lastname),

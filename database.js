@@ -16,7 +16,7 @@ class Inspector {
 class Suspect {
   constructor(firstname,lastname,role,evidence){
 
-    this.id = Inspector.incrementId()
+    this.id = Suspect.incrementId()
     this.firstname = firstname
     this.lastname = lastname
     this.role = role
@@ -50,11 +50,10 @@ const inspectors = [
 ]
 
 const suspects = [
-  new Suspect("Jean", "Dupont", "Père", ""),
-  new Suspect("Marie", "Dupont", "Mère", "A les mains pleine de sang"),
-  new Suspect("Paul", "Dupont", "Fils", ""),
-  new Suspect("Sophie", "Dupont", "Fille", ""),
-  new Suspect("Émile", "Dupont", "Oncle", ""),
+  new Suspect("Jean", "Dupont", "Père", "Il est le premier à avoir trouvé le corps. C'est un boucher."),
+  new Suspect("Marie", "Dupont", "Mère", "Coach sportif. A l'index gauche tout rouge, du sang peut être ?"),
+  new Suspect("Sophie", "Dupont", "Fille", "11 ans, ne comprends pas trop toute cette agitation"),
+  new Suspect("Émile", "Dupont", "Oncle", "Il pense avoir entendu, deux voix se disputer au moment des faits"),
 ];
 
 const evidences = [
@@ -63,4 +62,7 @@ const evidences = [
   new Evidence('drap','un Drap taché de sang retrouvé sur le sol, certainement tombé lors de la chute du jardinier')
 ]
 
-module.exports = {inspectors,suspects,evidences}
+const jail = []
+
+
+module.exports = {inspectors,suspects,evidences,jail}

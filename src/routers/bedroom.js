@@ -8,7 +8,8 @@ router
   .get('/',checkTokenMiddleware,(req,res,next)=>{
     res.json({
       "_links":{
-        "_self":hal.halLinkObject('/bedroom'),
+        "self":hal.halLinkObject('/bedroom'),
+        "home":hal.halLinkObject('/'),
         "evidences":hal.halLinkObject('/bedroom/evidences')
       },
       "msg":[
@@ -33,7 +34,7 @@ router
 
     res.json({
       "_links":{
-        "_self":hal.halLinkObject('/bedroom/evidences'),
+        "self":hal.halLinkObject('/bedroom/evidences'),
         "bedroom":hal.halLinkObject('/bedroom'),
         "evidences-description": hal.halLinkObject('/bedroom/evidences/{object_name}')
       },
@@ -41,6 +42,19 @@ router
         "evidences":evidencesData
       },
       "msg":"Pour inspecter les preuves suivez le lien 'evidences-description' ",
+    })
+  })
+
+  .get('/evidences/:object', checkTokenMiddleware, (req,res,next)=>{
+    let thisEvidence = evidences.find((elem)=>elem.object == req.params.object)
+
+    res.json({
+      "_links":{
+        "self":hal.halLinkObject(`/bedroom/evidences/${req.params.object}`),
+        "bedroom":hal.halLinkObject('/bedroom'),
+        "evidences-list": hal.halLinkObject('/bedroom/evidences')
+      },
+      thisEvidence,
     })
   })
 

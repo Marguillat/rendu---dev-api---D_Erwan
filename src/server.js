@@ -6,6 +6,8 @@ const port = 3000
 const identificationRouter = require('./routers/identification')
 const homeRouter = require('./routers/homeRouter')
 const bedroomRouter = require('./routers/bedroom')
+const suspectsRouter = require('./routers/suspects')
+const jailRouter = require('./routers/jail')
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false})) // permet de passer des data en post
@@ -15,6 +17,8 @@ app.use(express.urlencoded({extended:false})) // permet de passer des data en po
 app.use('/',homeRouter)
 app.use('/identification',identificationRouter)
 app.use('/bedroom',bedroomRouter)
+app.use('/suspects',suspectsRouter)
+app.use('/jail',jailRouter)
 
 
 app.listen(port, () => {
