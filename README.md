@@ -29,8 +29,18 @@ Choisissez votre Inspecteur préféré et commencez l'aventure :
 
 ## Lancer le projet
 
-Pour télécharger les dépendances : `npm install` ⬇️ Pour créer la clée secrete :
-`node utils/genkey.js` ⬇️ Pour lancer l'application : `npm run start` **ou**
+Pour télécharger les dépendances : `npm install`
+
+⬇️
+
+Pour créer la clée secrete :`node utils/genkey.js`
+
+⬇️
+
+Pour lancer l'application : `npm run start`
+
+**ou**
+
 Pour lancer l'application en mode dev : `npm run dev`
 
 ### Url d'entrée
