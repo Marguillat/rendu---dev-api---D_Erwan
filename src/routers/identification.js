@@ -8,7 +8,7 @@ const { createJWT } = require("../utils/jwt")
 
 function auth(firstname,lastname){
   let currentInspector = db.inspectors.find((inspector)=>(
-    inspector.firstname == firstname && inspector.lastname == lastname
+    inspector.firstname.toLowerCase() == firstname.toLowerCase() && inspector.lastname.toLowerCase() == lastname.toLowerCase()
   ))
   
   if (currentInspector === undefined){
@@ -29,7 +29,10 @@ router.post('/', (req,res,next)=>{
           "crime-scene": hal.halLinkObject('/bedroom'),
         },
         "jwt": createJWT(data.lastname),
-        "msg": "Utilisez cette Autorization JWT afin d'accéder à la scene de crime"
+        "msg": [
+          `Bonjour inspecteur ${data.lastname}`,
+          "Utilisez cette Autorization JWT afin d'accéder à la scene de crime"
+        ]
       })
   }else{
     res.status(401)

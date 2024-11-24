@@ -47,6 +47,10 @@ class Evidence {
 //tables///////////////////////////////////////////////////
 const inspectors = [
   new Inspector("Johnny","English"),
+  new Inspector("Frank","Columbo"),
+  new Inspector("Sherlock","Holmes"),
+  new Inspector("Jake","Peralta"),
+  new Inspector("Johnathan","Gadget"),
 ]
 
 const suspects = [
