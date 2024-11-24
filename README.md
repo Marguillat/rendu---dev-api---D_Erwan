@@ -41,6 +41,8 @@ Pour lancer l'application : `npm run start`
 
 **ou**
 
+⚠️commande un peu beugé⚠️
+
 Pour lancer l'application en mode dev : `npm run dev`
 
 ### Url d'entrée
