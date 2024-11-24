@@ -91,7 +91,8 @@ Les objets
 
 ## Remarques
 
-Le projet s'est trouvé être hyper sympa et
+Le projet s'est retrouvé être hyper sympa et qui pourrait être améliorer au
+niveau du gameplay dans le futur.
 
 ## Références
 
